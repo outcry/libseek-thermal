@@ -89,7 +89,7 @@ int main(int argc, char** argv)
         std::cerr << parser;
         return 1;
     }
-    float scale = 1.55;
+    float scale = 1.55; //scale 1.55 for lcd 320x240 
     if (_scale)
         scale = args::get(_scale);
     std::string output = "window";
@@ -172,7 +172,7 @@ int main(int argc, char** argv)
             imshow("SeekThermal", outframe);
             char c = waitKey(10);
             if (c == 's') {waitKey(0);}
- 		else if(c=='q'){break;}}
+ 		else if(c=='q'){break;}}  //added key "q" for exit
             		else {writer << outframe;}
     }
 
